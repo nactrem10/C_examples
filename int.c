@@ -4,7 +4,9 @@ int main(){
 
     int array[20];
 
-    for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++){
+    int length = sizeof(array) / sizeof(array[0]);
+    
+    for (int i = 0; i < length; i++){
         
         array[i] = i;
 
