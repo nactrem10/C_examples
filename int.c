@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main(){
+
+    int array[20];
+
+    for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++){
+        
+        array[i] = i;
+
+        printf("The %d th elemenet of the array is %d\n", i, array[i]);
+    }
+    
+
+    return 0;
+}
