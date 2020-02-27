@@ -8,7 +8,7 @@ int main(){
     // Finding length of an array
     int length = sizeof(array) / sizeof(array[0]);
 
-    // Filling and printing an array at the same time
+    // Filling and printing an array at the same time 
     for (int i = 0; i < length; i++){
         
         array[i] = i;
