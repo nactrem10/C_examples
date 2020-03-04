@@ -1,22 +1,33 @@
 #include <stdio.h>
 
-
 // Method for calculating avarage of two integers
 int calculateAvarage(int a, int b) {
 
     return ((a+b) / 2);
 }
 
+// Method for checking if array has negative value
+int hasNegative (int array[], int length) {
+
+    for (int i = 0; i < length; i++) {
+        
+        if (array[i] < 0) {
+
+            return 1;
+        }
+    }
+    
+    return 0;
+}
+
 int main(){
 
     // Declaring integers to use
-    int array[20], first = 5, second = 2;;
-
-    // Finding length of an array
-    int length = sizeof(array) / sizeof(array[0]);
+    int array[20], secondAray[5] = {1, 2, 3, -2, -5}, first = 5, second = 2;
+    
 
     // Filling and printing an array at the same time 
-    for (int i = 0; i < length; i++){
+    for (int i = 0; i < sizeof(array) / sizeof(array[0]); i++) {
         
         array[i] = i;
 
@@ -43,6 +54,15 @@ int main(){
 
     // Printing the avarage of inputs
     printf("The avarage of %d and %d is: %d\n", first, second, calculateAvarage(first, second));
+
+    // Printing that if the array has a negative value
+    if(hasNegative(secondAray, (sizeof(secondAray) / sizeof(secondAray[0])))) {
+
+        printf("The array has a negative value.\n");
+    } else {
+
+        printf("The array doesn't have a negative value.\n");
+    }
 
     return 0;
 }
