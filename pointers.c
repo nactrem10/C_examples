@@ -16,5 +16,15 @@ int main(){
         printf("The %d th elemenets address of the array is %p\n", i, &array[i]);
     }
 
+    // Creating a null pointer
+    int *p;
+
+    // Declaring an integer and assigning null pointer to the integer
+    int num = 5;
+    p = &num;
+
+    // Printing the pointer and the pointer of the number
+    printf("The created pointer is: %p, the pointer of the declared integer is: %p\n", p, &num);
+
     return 0;
 }
