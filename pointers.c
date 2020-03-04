@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(){
 
@@ -25,6 +26,15 @@ int main(){
 
     // Printing the pointer and the pointer of the number
     printf("The created pointer is: %p, the pointer of the declared integer is: %p\n", p, &num);
+
+    // Creating a pointer for allocating memory
+    int *ptr;
+
+    // Allocating memmory with int variables and assigning to the pointer
+    ptr = (int *)malloc(3 * sizeof(int));
+
+    // Emptying values assigned to the pointer from memory
+    free(ptr);
 
     return 0;
 }
