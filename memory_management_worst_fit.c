@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
 
     // Creating arrays of processes and empty blocks.
 
@@ -9,16 +8,13 @@ int main()
 
     // Allocating blocks for processes
 
-    for (int i = 0; i < sizeof(processes) / sizeof(processes[0]); i++)
-    {
+    for (int i = 0; i < sizeof(processes) / sizeof(processes[0]); i++) {
 
         // Finding the index of biggest element in blocks
         int maxIndex = 0;
-        for (int j = 1; j < sizeof(blocks) / sizeof(blocks[0]); j++)
-        {
+        for (int j = 1; j < sizeof(blocks) / sizeof(blocks[0]); j++) {
             // Checking if the block is the biggest and process can fit
-            if (blocks[j] > blocks[maxIndex] && processes[i] <= blocks[j])
-            {
+            if (blocks[j] > blocks[maxIndex] && processes[i] <= blocks[j]) {
                 maxIndex = j;
             }
         }
