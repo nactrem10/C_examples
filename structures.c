@@ -27,8 +27,8 @@ int main(){
     // Creating an array of persons and filling the array
     struct Person city[2];
 
-    city[0] = firstPerson;
-    city[1] = secondPerson;
+    // city[0] = firstPerson;
+    // city[1] = secondPerson;
     
     // Printing the array
     printf("City array; \n");
